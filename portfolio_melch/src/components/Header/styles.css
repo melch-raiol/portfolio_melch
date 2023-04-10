@@ -1,0 +1,141 @@
+header {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container-menu {
+    height: 50%;
+    width: 15%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkbox-menu {
+    position: absolute;
+    opacity: 0;
+}
+
+label {
+    height: 22px;
+    width: 50px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+label span {
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    display: block;
+    border-radius: 30px;
+    background: #fff;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 0;
+}
+
+label span:nth-child(2) {
+    top: 15px;
+}
+
+label span:nth-child(3) {
+    top: 30px;
+}
+
+#checkbox-menu:checked+label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 15px;
+}
+
+#checkbox-menu:checked+label span:nth-child(2) {
+    opacity: 0;
+}
+
+#checkbox-menu:checked+label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 15px;
+}
+
+.actived {
+    height: 40%;
+    width: 100%;
+    margin-top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    color: aliceblue;
+    position: absolute;
+    cursor: pointer;
+}
+
+.actived a:hover {
+    text-decoration: underline;
+    color: rgb(99, 168, 233);
+}
+
+.navbar {
+    display: none;
+}
+
+.logo {
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    border: 1px solid white;
+}
+
+.social-media {
+    height: 40px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-media img {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .navbar {
+        height: 50px;
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 0;
+        cursor: pointer;
+        position: relative;
+        color: aliceblue;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+        color: rgb(99, 168, 233);
+    }
+
+    .container-menu {
+        display: none;
+    }
+
+    .actived {
+        display: none;
+    }
+}
